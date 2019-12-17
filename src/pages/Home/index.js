@@ -27,12 +27,13 @@ export default function Home() {
     const newList = [...todoList];
 
     newList.push({
-      id: todoList.length + 1,
+      id: Math.random()
+        .toString(36)
+        .substr(2, 10),
       title: todo,
       remove: false,
       done: false
     });
-
     setTodoList(newList);
   }
 
